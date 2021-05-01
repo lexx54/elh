@@ -10,7 +10,7 @@ import UserService from "../services/user.service";
 import AuthService from "../services/auth.service";
 import Functions from "../functions";
 import Child from "../components/child"
-
+const currentUser = AuthService.getCurrentUser();
 
 const BoardUser = () => {
   const [content, setContent] = useState("");
@@ -19,7 +19,7 @@ const BoardUser = () => {
   const size = Functions.useWindowSize();
   const {url,path} = useRouteMatch()
   //testing
-  const currentUser = AuthService.getCurrentUser();
+  
 
   useEffect(() => {
     UserService.getUserBoard(currentUser.level.id).then(
@@ -43,7 +43,7 @@ const BoardUser = () => {
         setContent(_content);
       }
     );
-  });
+  },[]);
 
 
   return (

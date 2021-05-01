@@ -13,8 +13,8 @@ const Up = (props) => {
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
   const [email,setEmail]=useState('');
-  const [level,setlevel]=useState('');
   const [isTeacher,setIsTeacher]=useState(false);
+  const [level,setlevel]=useState("");
   const [successful, setSuccessful] = useState(false);
   const [message,setMessage]=useState(undefined);
 
@@ -43,7 +43,7 @@ const handleValues = (e) => {
     const teacherRole=isTeacher?["teacher"]:"";
     e.preventDefault();
     console.log("sending data to server");
-
+    console.log(firstname,lastname,username,email,password,level,teacherRole)
     AuthService
       .register(firstname,lastname,username,email,password,level,teacherRole)
       .then((response) => {
@@ -156,6 +156,7 @@ const handleValues = (e) => {
           {!isTeacher && (<Form.Group as={Col}>
             <Form.Label>Level: </Form.Label>
             <Form.Control as="select" value={level} onChange={handleValues} id="level">
+              <option value="">choose one</option>
               <option value="introductory">Introductory</option>
               <option value="basic">Basic</option>
               <option value="intermediate">Intermediate</option>

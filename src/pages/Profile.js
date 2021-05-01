@@ -20,10 +20,10 @@ const Profile = () => {
       <p>
         <strong>Email:</strong> {currentUser.email}
       </p>
-      <p>
+      {currentUser.level && <p>
         <strong>Level:</strong> 
         you are in {currentUser.level.name} which has {currentUser.level.lessons} Lessons
-      </p>
+      </p>}
       <strong>Authorities:</strong>
       <ul>
         {currentUser.roles &&
