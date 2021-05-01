@@ -43,7 +43,7 @@ const BoardUser = () => {
         setContent(_content);
       }
     );
-  }, []);
+  });
 
 
   return (

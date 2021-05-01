@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/auth/";
+// const API_URL = "http://localhost:8080/api/auth/";
+const API_URL = "https://obscure-river-43181.herokuapp.com/api/auth"
 
 const register = (firstname ,lastname , username, email, password,level,isTeacher=undefined) => {
   return axios.post(API_URL + "signup", {
