@@ -22,27 +22,23 @@ const BoardUser = () => {
   
 
   useEffect(() => {
-    UserService.getUserBoard(currentUser.level.id).then(
-      (response) => {
-        console.log(currentUser)
-        console.log({response})
+    const bringData = async ()=>{
+      try{
+        const response = await UserService.getUserBoard(currentUser.level.id);
         for (const obj of response){
           setExercisesTitle(prev=>[...prev,obj.lesson]);
           setAnswers(prev=>[...prev,obj.answers]);
         }
-        setContent(response);
-      },
-      (error) => {
-        const _content =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
-
+      } catch(error){
+        const _content = (error.response && error.response.data && error.response.data.message) 
+          || error.message 
+          ||error.toString();
+        
         setContent(_content);
       }
-    );
+    }
+
+    bringData();
   },[]);
 
 
