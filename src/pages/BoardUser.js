@@ -47,7 +47,6 @@ const BoardUser = () => {
 
 
   return (
-
       <>
     <main className="container-fluid p-0 m-0 exercise-panel">
       

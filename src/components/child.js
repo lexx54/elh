@@ -14,6 +14,18 @@ const Child = ({user,list}) => {
       break;
       case "3-4":formNumber="Form2";answerNumber=1;
       break;
+      case "5-6":formNumber="Form3";answerNumber=2;
+      break;
+      case "7-8":formNumber="Form4";answerNumber=3;
+      break;
+      case "9-10":formNumber="Form5";answerNumber=4;
+      break;
+      case "11-12":formNumber="Form6";answerNumber=5;
+      break;
+      case "13-14":formNumber="Form7";answerNumber=6;
+      break;
+      case "15-16":formNumber="Form8";answerNumber=7;
+      break;
       default: console.log("do not exist")
       break;
     }
