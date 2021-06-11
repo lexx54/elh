@@ -21,30 +21,27 @@ const In = (props) => {
     setPassword(e.target.value);
   }
 
-  const sendData = (e) =>{
+  const sendData = async (e) =>{
     e.preventDefault();
     console.log("sending data to log In",{user,password})
     setUser("");
     setPassword("");
     setLoading(true);
-    AuthService.login(user,password).then(
-      () => {
-        props.history.push("/profile");
-        window.location.reload();
-      },
-      (error) => {
-        const resMessage =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
+
+    try{
+      await AuthService.login(user,password);
+      props.history.push("/profile");
+      window.location.reload();
+    } catch(error){
+      const resMessage =
+          (error.response && error.response.data && error.response.data.message) 
+          || error.message 
+          || error.toString();
 
         setLoading(false);
         setMessage(resMessage);
-      }
-    );
-    setTimeout(()=>{setMessage("")},3000)
+        setTimeout(()=>{setMessage("")},3000)
+    }
   }
   return(
     <Container className="py-3">
