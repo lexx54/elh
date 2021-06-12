@@ -10,7 +10,7 @@ import UserService from "../services/user.service";
 import AuthService from "../services/auth.service";
 import Functions from "../functions";
 import Child from "../components/child"
-const currentUser = AuthService.getCurrentUser();
+
 
 const BoardUser = () => {
   const [content, setContent] = useState("");
@@ -18,6 +18,7 @@ const BoardUser = () => {
   const [answers,setAnswers]=useState([]);
   const size = Functions.useWindowSize();
   const {url,path} = useRouteMatch()
+  const currentUser = AuthService.getCurrentUser();
   //testing
   
 
