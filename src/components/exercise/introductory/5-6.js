@@ -77,52 +77,54 @@ const handleSubmit = e =>{
   {message && <Alert variant={pass?"success":"danger"}>{message}</Alert>}
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">1-</Col>
+
       <Col xs="auto">
-        <Form.Control as="select" value={answer1}
-          id="answer1" onChange={(e)=>Functions.handleValue(e,setAnswer1)}>
-          <option value=""></option>
-          <option value="it">It</option>
-          <option value="what">What</option>
-          <option value="who">Who</option>
+      Where are you 
+      </Col>
+
+      <Col xs="3" sm="2">
+        <Form.Control value={answer1} id="answer1" 
+          onChange={(e)=>Functions.handleValue(e,setAnswer1)}>
         </Form.Control>
       </Col>
+
       <Col xs="auto">
-      is he?
+      ?
       </Col>
       {check1 && <i className="fas fa-check-circle"></i>}
-        
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">2-</Col>
       <Col xs="auto">
-      Maria is a
+      Where 
       </Col>
       <Col xs="auto">
         <Form.Control as="select" value={answer2}
         id="answer2" onChange={(e)=>Functions.handleValue(e,setAnswer2)}>
           <option value=""></option>
-          <option value="female">Female</option>
-          <option value="cat">Cat</option>
-          <option value="lawyer">Lawyer</option>
+          <option value="female">A</option>
+          <option value="cat">Are</option>
+          <option value="is">Is</option>
         </Form.Control>
+      </Col>
+      <Col xs="auto">
+      the table?
       </Col>
       {check2 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2 mb-2">
       <Col xs="auto">3-</Col>
-      <Col xs="auto">
-        <Form.Control as="select" value={answer3}
-          id="answer3" onChange={(e)=>Functions.handleValue(e,setAnswer3)}>
-          <option value=""></option>
-          <option value="who">Who</option>
-          <option value="what">What</option>
-          <option value="that">That</option>
+      
+      <Col xs="3" sm="2">
+      <Form.Control value={answer3} id="answer3" 
+          onChange={(e)=>Functions.handleValue(e,setAnswer3)}>
         </Form.Control>
       </Col>
+
       <Col xs="auto">
-      is a mailman?
+      nationality are you?
       </Col>
       {check3 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
@@ -130,7 +132,7 @@ const handleSubmit = e =>{
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">4-</Col>
       <Col xs="auto">
-      I am
+      The Phone is 
       </Col>
       <Col xs="3" sm="2">
         <Form.Control value={answer4} id="answer4" 
@@ -138,7 +140,7 @@ const handleSubmit = e =>{
         </Form.Control>
       </Col>
       <Col xs="auto">
-        Venezuela
+        the desk
       </Col>
       {check4 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
@@ -146,33 +148,35 @@ const handleSubmit = e =>{
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">5-</Col>
       <Col xs="auto">
+        we are 
+      </Col>
+      <Col xs="auto">
         <Form.Control as="select" value={answer5} 
           id="answer5" onChange={(e)=>Functions.handleValue(e,setAnswer5)}>
             <option value=""></option>
-          <option value="i">I</option>
-          <option value="you">You</option>
-          <option value="she">She</option>
+          <option value="from">From</option>
+          <option value="the">The</option>
+          <option value="she">Over</option>
         </Form.Control>
       </Col>
       <Col xs="auto">
-      are Colombian
+      Germany
       </Col>
       {check5 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">6-</Col>
+      <Col xs="auto">
+      What
+      </Col>
       <Col xs="3" sm="2">
-        <Form.Control as="select" value={answer6} id="answer6" 
-          onChange={(e)=>Functions.handleValue(e,setAnswer6)}>
-          <option value=""></option>
-          <option value="what nationality"> What nationality</option>
-          <option value="where">Where</option>
-          <option value="this"> This</option>
+      <Form.Control value={answer6}  
+          id="answer6" onChange={(e)=>Functions.handleValue(e,setAnswer6)}> 
         </Form.Control>
       </Col>
       <Col xs="auto">
-      is Donald trump?
+      is Shakira?
       </Col>
       {check6 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
@@ -180,66 +184,65 @@ const handleSubmit = e =>{
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">7-</Col>
       <Col xs="auto">
-      My cousin is
+      My mon is
       </Col>
       <Col xs="auto">
         <Form.Control as="select" value={answer7}
           id="answer7" onChange={(e)=>Functions.handleValue(e,setAnswer7)}>
             <option value=""></option>
-          <option value="young">Young</option>
-          <option value="brazilian">Brazilian</option>
-          <option value="he">He</option>
+          <option value="young">On</option>
+          <option value="at">At</option>
+          <option value="he">Near</option>
         </Form.Control>
       </Col>
-      
+      <Col xs="auto">
+      the work
+      </Col>
       {check7 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">8-</Col>
-      <Col xs="auto">we</Col>
+      <Col xs="auto">The money is</Col>
       <Col xs="3" sm="2">
         <Form.Control value={answer8}  
           id="answer8" onChange={(e)=>Functions.handleValue(e,setAnswer8)}> 
         </Form.Control>
       </Col>
       <Col xs="auto">
-      from Canada
+      the TV and the closet
       </Col>
       {check8 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">9-</Col>
-      <Col xs="auto">What is your favourite color?</Col>
-      <Col xs="auto">my favourite color is</Col>
       <Col xs="auto">
         <Form.Control value={answer9} id="answer9"  
           onChange={(e)=>Functions.handleValue(e,setAnswer9)} as="select">
           <option value=""></option>
-          <option value="red">Red</option>
-          <option value="dog">Dog</option>
-          <option value="she">She</option>
+          <option value="red">the</option>
+          <option value="where">Where</option>
+          <option value="is">what</option>
         </Form.Control>
       </Col>
-
+      <Col xs="auto"> is my shirt?</Col>
       {check9 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">10-</Col>
-      
+      <Col xs="auto">
+      I am
+      </Col>
       <Col xs="auto">
         <Form.Control as="select" value={answer10} 
           id="answer10" onChange={(e)=>Functions.handleValue(e,setAnswer10)}>
             <option value=""></option>
-          <option value="that">That</option>
-          <option value="the">The</option>
-          <option value="what">What</option>
+          <option value="th">Boss</option>
+          <option value="greek">Greek</option>
+          <option value="what">Tall</option>
         </Form.Control>
-      </Col>
-      <Col xs="auto">
-      nationality are they?
       </Col>
       {check10 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
