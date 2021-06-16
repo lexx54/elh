@@ -130,7 +130,7 @@ const handleSubmit = e =>{
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">4-</Col>
       <Col xs="auto">
-      I am
+      That is
       </Col>
       <Col xs="3" sm="2">
         <Form.Control value={answer4} id="answer4" 
@@ -138,7 +138,7 @@ const handleSubmit = e =>{
         </Form.Control>
       </Col>
       <Col xs="auto">
-        Venezuela
+        phone (he)
       </Col>
       {check4 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
@@ -150,29 +150,32 @@ const handleSubmit = e =>{
           id="answer5" onChange={(e)=>Functions.handleValue(e,setAnswer5)}>
             <option value=""></option>
           <option value="i">I</option>
-          <option value="you">You</option>
+          <option value="my">My</option>
           <option value="she">She</option>
         </Form.Control>
       </Col>
       <Col xs="auto">
-      are Colombian
+      Dad is the best
       </Col>
       {check5 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">6-</Col>
+      <Col xs="auto">
+      she is a 
+      </Col>
       <Col xs="3" sm="2">
         <Form.Control as="select" value={answer6} id="answer6" 
           onChange={(e)=>Functions.handleValue(e,setAnswer6)}>
           <option value=""></option>
-          <option value="what nationality"> What nationality</option>
-          <option value="where">Where</option>
-          <option value="this"> This</option>
+          <option value="what nationality"> Far</option>
+          <option value="where">His</option>
+          <option value="pretty"> Pretty</option>
         </Form.Control>
       </Col>
       <Col xs="auto">
-      is Donald trump?
+      girl
       </Col>
       {check6 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
@@ -186,9 +189,9 @@ const handleSubmit = e =>{
         <Form.Control as="select" value={answer7}
           id="answer7" onChange={(e)=>Functions.handleValue(e,setAnswer7)}>
             <option value=""></option>
-          <option value="young">Young</option>
-          <option value="brazilian">Brazilian</option>
-          <option value="he">He</option>
+          <option value="young">We</option>
+          <option value="brazilian">He</option>
+          <option value="tall">Tall</option>
         </Form.Control>
       </Col>
       
@@ -197,14 +200,18 @@ const handleSubmit = e =>{
 
     <Form.Row className="align-items-center mb-2">
       <Col xs="auto">8-</Col>
-      <Col xs="auto">we</Col>
+      <Col xs="auto">what is the</Col>
       <Col xs="3" sm="2">
-        <Form.Control value={answer8}  
-          id="answer8" onChange={(e)=>Functions.handleValue(e,setAnswer8)}> 
+      <Form.Control as="select" value={answer8}
+          id="answer8" onChange={(e)=>Functions.handleValue(e,setAnswer8)}>
+            <option value=""></option>
+          <option value="young">We</option>
+          <option value="brazilian">He</option>
+          <option value="smart">Smart</option>
         </Form.Control>
       </Col>
       <Col xs="auto">
-      from Canada
+      guy?
       </Col>
       {check8 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
@@ -233,13 +240,13 @@ const handleSubmit = e =>{
         <Form.Control as="select" value={answer10} 
           id="answer10" onChange={(e)=>Functions.handleValue(e,setAnswer10)}>
             <option value=""></option>
-          <option value="that">That</option>
-          <option value="the">The</option>
+          <option value="our">Our</option>
+          <option value="the">it</option>
           <option value="what">What</option>
         </Form.Control>
       </Col>
       <Col xs="auto">
-      nationality are they?
+      house is there
       </Col>
       {check10 && <i className="fas fa-check-circle"></i>}  
     </Form.Row>
