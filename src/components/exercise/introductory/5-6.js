@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Functions from "../../../functions"
 
-const Form2 = ({answerList}) => {
+const Form3 = ({answerList}) => {
   const [answer1,setAnswer1]=useState("")
   const [answer2,setAnswer2]=useState("");
   const [answer3,setAnswer3]=useState("");
@@ -255,4 +255,4 @@ const handleSubmit = e =>{
   </Form>
 )}
 
-export default Form2;
+export default Form3;
